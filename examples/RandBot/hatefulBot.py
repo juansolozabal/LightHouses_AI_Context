@@ -43,12 +43,12 @@ class HatefulBot(interface.Bot):
                 return self.attack(energy)
 
         target = chooseLighthouse(allLh, cx, cy)
-        move = []
-        if isAStarPossible(allLh, cx, cy):
-            path = aStar([cx, cy], target, state["view"])
-            move = path[0]
-        else:
-            move = getCloserToLighthouse(target, cx, cy)
+        move = getCloserToLighthouse(target, cx, cy)
+        # if isAStarPossible(allLh, cx, cy):
+        #    path = aStar([cx, cy], target, state["view"])
+        #    move = path[0]
+        #else:
+        #    move = getCloserToLighthouse(target, cx, cy)
         # Mover aleatoriamente
         # moves = ((-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1))
         # Determinar movimientos válidos
